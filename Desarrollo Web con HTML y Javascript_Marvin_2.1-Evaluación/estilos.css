@@ -1,0 +1,150 @@
+/* --- INSTRUCCIÓN 12 y 14: Regla al principio del CSS --- */
+body p {
+    color: green;
+}
+
+:root {
+    --color-barra: #0b2226;          
+    --color-texto: #ffffff !important; /* --- INSTRUCCIÓN 8: !important agregado --- */         
+    --color-texto-hover: #00adb5;    
+    --color-fondo-pagina: #e6e6e6;   
+    --color-activo-bg: #ffffff;      
+    --color-activo-texto: #333333;   
+    --fuente-principal: Arial, Helvetica, sans-serif;
+    --altura-barra: 55px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo-pagina);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: var(--color-barra);
+    height: var(--altura-barra);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.nav-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 0 18px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-texto-hover);
+}
+
+.nav-link.active,
+.nav-item:first-child .nav-link {
+    background-color: var(--color-activo-bg);
+    color: var(--color-activo-texto);
+    font-weight: 500;
+}
+
+.nav-link.active:hover {
+    color: var(--color-activo-texto);
+}
+
+.contenedor-principal {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.seccion-imagen {
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.imagen-central {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+.footer {
+    background-color: var(--color-barra);
+    height: var(--altura-barra);
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    font-size: 14px;
+}
+
+/* --- INSTRUCCIÓN 10: Nuevo selector para la etiqueta p --- */
+p {
+    color: blue;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .card-imagen, .contenedor-imagen {
+    width: 95%;
+    padding: 10px;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+
+/* --- INSTRUCCIÓN 1 y 2: Regla agregada al final del archivo --- */
+body {
+    color: red;
+}
