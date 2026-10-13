@@ -1,0 +1,79 @@
+/* ========================================================
+   INSTRUCCIÓN 4: Margen de 20px en todos los lados y fuente Verdana
+   ======================================================== */
+body {
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* ========================================================
+   INSTRUCCIÓN 6: Asignar fuente Tahoma a todos los párrafos y labels
+   ======================================================== */
+p, label {
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 15px;
+    display: block;
+    margin-top: 10px;
+}
+
+/* ========================================================
+   INSTRUCCIÓN 3: Selector de etiqueta para textarea con ancho de 200px
+   ======================================================== */
+textarea {
+    width: 200px;
+    height: 60px;
+    display: block;
+    margin-top: 4px;
+    resize: both;
+}
+
+/* ========================================================
+   INSTRUCCIÓN 5: Selector de input con name="email" y fondo #eeeeee
+   ======================================================== */
+input[name="email"] {
+    background-color: #eeeeee;
+}
+
+/* ========================================================
+   Ajustes para que coincida exactamente con la imagen de muestra
+   ======================================================== */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 200px;
+    padding: 2px 4px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    display: block;
+    border: 1px solid #767676;
+}
+
+/* Ajuste para que los radios no se muestren en bloque separado */
+.radio-grupo label {
+    display: block;
+    margin-top: 2px;
+}
+
+.radio-grupo input[type="radio"] {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.input-checkbox {
+    margin-top: 4px;
+    display: block;
+}
+
+button {
+    margin-top: 15px;
+    padding: 3px 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
