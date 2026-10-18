@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela Virtual Infantil - Patrón Mostly Fluid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f7fafc;
+            padding: 10px;
+        }
+
+        /* Contenedor flexible que envuelve todas las columnas */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        /* Estilo base y decorativo para las cajas de la escuela virtual */
+        .caja {
+            padding: 25px 15px;
+            text-align: center;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 6px;
+        }
+
+        /* Colores alegres representativos de una escuela infantil */
+        .c1 { background-color: #ff6b6b; } /* Cabecera / Banner */
+        .c2 { background-color: #4ecdc4; } /* Bienvenida */
+        .c3 { background-color: #f7b731; } /* Clases / Cursos */
+        .c4 { background-color: #5f27cd; } /* Actividades */
+        .c5 { background-color: #2ed573; } /* Recursos / Juegos */
+
+        /* ========================================================
+           INSTRUCCIÓN 1 a 4: Estilos para móviles (Base)
+           ======================================================== */
+        .c1, .c2, .c3, .c4, .c5 {
+            width: 100%;
+        }
+
+        /* ========================================================
+           INSTRUCCIÓN 5 a 10: Estilos para tabletas (min-width: 600px)
+           ======================================================== */
+        @media (min-width: 600px) {
+            .c2, .c3, .c4, .c5 {
+                width: 50%;
+            }
+        }
+
+        /* ========================================================
+           INSTRUCCIÓN 11 a 30: Estilos para escritorio (min-width: 800px)
+           ======================================================== */
+        @media (min-width: 800px) {
+            .c1 {
+                width: 100%;
+            }
+
+            .c2 {
+                width: 100%;
+            }
+
+            .c3, .c4, .c5 {
+                width: 33.33%;
+            }
+
+            .container {
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <div class="caja c1">
+            <h2>C1: Escuela Virtual Infantil</h2>
+            <p>Aprende jugando desde casa</p>
+        </div>
+
+        <div class="caja c2">
+            <h3>C2: Aula de Bienvenida</h3>
+            <p>Plataforma interactiva para niños y niñas</p>
+        </div>
+
+        <div class="caja c3">
+            <h3>C3: Cursos y Cuentos</h3>
+            <p>Lectura, números y arte</p>
+        </div>
+
+        <div class="caja c4">
+            <h3>C4: Actividades Diarias</h3>
+            <p>Talleres prácticos y canciones</p>
+        </div>
+
+        <div class="caja c5">
+            <h3>C5: Zona de Juegos</h3>
+            <p>Desafíos lógicos y memoria</p>
+        </div>
+    </main>
+
+</body>
+</html>

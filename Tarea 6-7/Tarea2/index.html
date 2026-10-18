@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes Adaptativas por Porcentaje</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f2f4f7;
+            padding: 20px;
+            color: #333333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #1a365d;
+        }
+
+        .contenedor-articulos {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        article {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        article h2 {
+            margin-bottom: 12px;
+            font-size: 20px;
+            color: #2b6cb0;
+        }
+
+        article p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555555;
+            line-height: 1.5;
+        }
+
+        /* ========================================================
+           INSTRUCCIÓN 2: Primer estilo con ancho de 70%
+           ======================================================== */
+        .adaptativa-porcentaje-1 {
+            width: 70%;
+            height: auto;
+            display: inline-block;
+            border-radius: 6px;
+        }
+
+        /* ========================================================
+           INSTRUCCIÓN 4: Segundo estilo con ancho de 50%
+           ======================================================== */
+        .adaptativa-porcentaje-2 {
+            width: 50%;
+            height: auto;
+            display: inline-block;
+            border-radius: 6px;
+        }
+
+        /* ========================================================
+           INSTRUCCIÓN 6: Tercer estilo con ancho de 20%
+           ======================================================== */
+        .adaptativa-porcentaje-3 {
+            width: 20%;
+            height: auto;
+            display: inline-block;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Práctica de Imágenes Adaptativas con Porcentaje</h1>
+
+    <main class="contenedor-articulos">
+
+        <!-- 1. PRIMER ARTÍCULO (70%) -->
+        <article>
+            <h2>Artículo 1: Tamaño al 70%</h2>
+            <!-- Instrucción 1: Clase adaptativa-porcentaje-1 -->
+            <img src="1.jpeg" 
+                 class="adaptativa-porcentaje-1">
+            <p>Esta imagen se ajusta constantemente al <strong>70%</strong> del ancho disponible del artículo.</p>
+        </article>
+
+        <!-- 2. SEGUNDO ARTÍCULO (50%) -->
+        <article>
+            <h2>Artículo 2: Tamaño al 50%</h2>
+            <!-- Instrucción 3: Clase adaptativa-porcentaje-2 -->
+            <img src="5t.jpeg"
+                 class="adaptativa-porcentaje-2">
+            <p>Esta imagen ocupa la mitad del ancho (<strong>50%</strong>) de su contenedor.</p>
+        </article>
+
+        <!-- 3. TERCER ARTÍCULO (20%) -->
+        <article>
+            <h2>Artículo 3: Tamaño al 20%</h2>
+            <!-- Instrucción 5: Clase adaptativa-porcentaje-3 -->
+            <img src="Mar.jpg"
+                 class="adaptativa-porcentaje-3">
+            <p>Esta imagen se visualiza a un tamaño más compacto, equivalente al <strong>20%</strong> del ancho.</p>
+        </article>
+
+    </main>
+
+</body>
+</html>

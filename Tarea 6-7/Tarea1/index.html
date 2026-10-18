@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Instrucción 1 y 2: Etiqueta de viewport para diseño adaptativo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DientesFelices.com - Clínica Dental</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Instrucción 3: Fuente en función de vw (3% del ancho de pantalla) */
+        body {
+            font-size: 3vw;
+            background-color: #f7fbff;
+            color: #2c3e50;
+            padding: 2vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Instrucción 4 a 7: Espacios y bordes en vh / vw para el header */
+        header {
+            background-color: #2980b9;
+            color: #ffffff;
+            text-align: center;
+            padding: 1vh 1vw;        /* Instrucción 5 */
+            border-radius: 1vh;     /* Instrucción 6 */
+            margin-bottom: 1vh;     /* Instrucción 7 */
+            box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.5em; /* Proporcional a los 3vw base */
+            margin-bottom: 0.5vh;
+        }
+
+        header p {
+            font-size: 0.9em;
+        }
+
+        /* Contenido principal */
+        main {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 1vh;
+            padding: 2vh 2vw;
+            box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.05);
+        }
+
+        main h2 {
+            color: #16a085;
+            margin-bottom: 1vh;
+            font-size: 1.2em;
+        }
+
+        main p {
+            line-height: 1.5;
+            margin-bottom: 1vh;
+        }
+
+        .servicios-lista {
+            list-style-type: square;
+            margin-left: 4vw;
+            margin-top: 1vh;
+        }
+
+        .servicios-lista li {
+            margin-bottom: 0.5vh;
+        }
+
+        /* Instrucción 8 a 10: Espacios en vw para el footer */
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            text-align: center;
+            border-radius: 1vh;
+            padding: 1vh 1vw;
+            padding-top: 1vw;       /* Instrucción 9 */
+            margin-top: 1vw;        /* Instrucción 10 */
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con padding, border-radius y margin-bottom en vh/vw -->
+    <header>
+        <h1>DientesFelices.com</h1>
+        <p>Tu clínica odontológica de confianza</p>
+    </header>
+
+    <!-- Contenido adaptable -->
+    <main>
+        <h2>Cuidado y Salud Bucal</h2>
+        <p>
+            En DientesFelices ofrecemos atención integral para toda la familia con la última tecnología en estética y ortodoncia.
+        </p>
+        <ul class="servicios-lista">
+            <li>Limpieza y profilaxis profunda</li>
+            <li>Ortodoncia invisible y brackets</li>
+            <li>Blanqueamiento dental profesional</li>
+        </ul>
+    </main>
+
+    <!-- Pie de página con padding-top y margin-top en vw -->
+    <footer>
+        <p>&copy; 2026 DientesFelices.com - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

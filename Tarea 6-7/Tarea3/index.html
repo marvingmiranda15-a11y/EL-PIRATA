@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .contenedor {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #333333;
+        }
+
+        /* ========================================================
+           INSTRUCCIÓN 2: Ocultar el div #resumen por defecto
+           (Pantallas pequeñas menores a 600px)
+           ======================================================== */
+        #resumen {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 4px solid #007791;
+        }
+
+        /* ========================================================
+           INSTRUCCIONES 3, 4, 5, 6, 7, 8 y 9:
+           Punto de corte: Más de 600px de ancho
+           ======================================================== */
+        @media (min-width: 600px) {
+            /* Mostrar el resumen */
+            #resumen {
+                display: block;
+            }
+
+            /* Tamaño de letra a 16px y color rojo */
+            body {
+                font-size: 16px;
+                color: red;
+            }
+        }
+
+        /* ========================================================
+           INSTRUCCIÓN 10:
+           Punto de corte: Más de 900px de ancho
+           ======================================================== */
+        @media (min-width: 900px) {
+            /* Tamaño de letra a 14px y color negro */
+            body {
+                font-size: 14px;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Diseño Adaptativo con Media Queries</h1>
+        
+        <p>
+            Este párrafo permite comprobar en tiempo real cómo varía el tamaño de la fuente y su color según el ancho de la ventana del navegador.
+        </p>
+
+        <!-- Div que se oculta en móviles y aparece a partir de 600px -->
+        <div id="resumen">
+            <h3>Sección de Resumen</h3>
+            <p>
+                Este bloque se encuentra oculto en pantallas de menos de 600px (móviles) y se hace visible automáticamente al superar los 600px de ancho.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
