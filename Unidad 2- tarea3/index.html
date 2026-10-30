@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Panel Administrativo Dinámico</title>
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Menú lateral plegable con las dos secciones -->
+    <nav id="menu-lateral">
+        <button id="btn-inicio" class="opcion-menu activo">Inicio</button>
+        <button id="btn-formulario" class="opcion-menu">Formulario</button>
+    </nav>
+
+    <!-- Botón circular flotante para colapsar/desplegar el menú -->
+    <button id="btn-toggle-menu" title="Ocultar/Mostrar Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Contenedor central donde JavaScript renderiza las vistas dinámicamente -->
+    <main id="area-central"></main>
+
+    <!-- Lógica JavaScript externa -->
+    <script src="script.js"></script>
+</body>
+</html>
